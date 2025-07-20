@@ -41,10 +41,7 @@ class SVM:
 		return ...
 
 	def fit_gd(self, X, Y, verbose=False):
-		for e in range(1, self._n_epochs + 1):
-
-			if verbose:
-				print("Epoch {} Loss {}".format(e, cur_loss))
+		pass
 
 	def predict(self, X):
 		return ...

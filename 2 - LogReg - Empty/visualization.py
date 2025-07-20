@@ -51,4 +51,4 @@ def plot_boundary(X, Y, model, title=''):
     ax[0].set_title('Data')
     ax[1].set_title('Boundary')
 
-    plt.waitforbuttonpress()
+    plt.waitforbuttonpress(timeout=-1)

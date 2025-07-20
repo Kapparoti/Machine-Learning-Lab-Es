@@ -85,16 +85,37 @@ class Eigenfaces:
 
 class NearestNeighbor:
 
-	def __init__(self):
-		self._X_db, self._Y_db = None, None
+    def __init__(self):
+        self._X_db, self._Y_db = None, None
 
-	def fit(self, X: np.ndarray, y: np.ndarray, ):
-		# Fit the model using X as training data and y as target values
-		self._X_db = X
-		self._Y_db = y
+    def fit(self, X: np.ndarray, y: np.ndarray,):
+        """
+        Fit the model using X as training data and y as target values
+        """
+        self._X_db = X
+        self._Y_db = y
 
-	def predict(self, X: np.ndarray):
-		return ...
+    def predict(self, X: np.ndarray):
+        """
+        Finds the 1-neighbor of a point. Returns predictions as well as indices of
+        the neighbors of each point.
+        """
+        num_test_samples = X.shape[0]
+
+        # predict test faces
+        predictions = np.zeros((num_test_samples,))
+        nearest_neighbors = np.zeros((num_test_samples,), dtype=np.int32)
+
+        for i in range(num_test_samples):
+
+            distances = np.sum(np.square(self._X_db - X[i]), axis=1)
+
+            # nearest neighbor classification
+            nearest_neighbor = np.argmin(distances)
+            nearest_neighbors[i] = nearest_neighbor
+            predictions[i] = self._Y_db[nearest_neighbor]
+
+        return predictions, nearest_neighbors
 
 
 if __name__ == '__main__':

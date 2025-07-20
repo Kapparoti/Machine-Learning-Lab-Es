@@ -44,18 +44,7 @@ class AdaBoostClassifier:
 		self.n_max_trials = n_max_trials
 
 	def fit(self, X: np.ndarray, Y: np.ndarray, verbose: bool = False):
-		# start training
-		for l in range(self.n_learners):
-
-			cur_idx = ...
-			cur_X = ...
-			y_pred = ...
-
-			sample_weights = ...
-
-			if verbose:
-				self._plot(cur_X, y_pred, sample_weights[cur_idx],
-						   self.learners[-1], l)
+		pass
 
 	def predict(self, X: np.ndarray):
 		return ...

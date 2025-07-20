@@ -39,4 +39,13 @@ class KMeans:
 		return ...
 
 	def fit_predict(self, X: np.ndarray):
+
+
+
+	#		if self.verbose:
+	#			print(f'Iteration: {n} - cost function: {best_cost: .2f}')
+	#	if self.verbose:
+	#	fig, ax = plt.subplots()
+	#	ax.scatter(X[:, 0], X[:, 1], c=assignments, s=40)
+	#	ax.plot(centers[:, 0], centers[:, 1], 'r*', markersize=20)
 		return ...

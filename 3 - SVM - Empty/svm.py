@@ -37,6 +37,7 @@ class SVM:
 		ynew[ynew == 1.0] = self._original_labels[1]
 		return ynew
 
+	# ! FACOLTATIVO !
 	def loss(self, y_true, y_pred):
 		return ...
 

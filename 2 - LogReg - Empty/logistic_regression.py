@@ -7,7 +7,7 @@ eps = np.finfo(float).eps
 def sigmoid(x):
 	return ...
 
-
+# ! FACOLTATIVO !
 def loss(y_true, y_pred):
 	return ...
 
